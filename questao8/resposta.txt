@@ -1,0 +1,1 @@
+o primeiro mostra os conteudos do vetor declarado e o segundo mostra os endereços de cada posição do vetor

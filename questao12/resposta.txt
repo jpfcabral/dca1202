@@ -1,0 +1,1 @@
+Uma das aplicações do ponteiro para função é a possibilidade de definir, em tempo de execução, uma função para ser executada sem precisar escrever o nome da função

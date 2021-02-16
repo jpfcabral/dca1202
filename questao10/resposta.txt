@@ -1,0 +1,10 @@
+◦ x for declarado como char?
+	61fdec, 61fded, 61fdee
+◦ x for declarado como int?
+	61fdd0, 61fdd4, 61fdd8 
+◦ x for declarado como float?
+	61fdc0, 61fdc4, 61fdc8
+◦ x for declarado como double?
+	61fda0, 61fda8, 61fdb0
+
+Vemos que diferente do suposto, o tipo int está armazenando 4 bytes e não 2.

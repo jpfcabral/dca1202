@@ -1,0 +1,5 @@
+p = mat + 1; -> p aponta para o valor de mat[1]
+x = (*mat)++; -> Soma 1 ao valor de mat[0]
+
+p = mat++; -> Não faz sentido pois mat não é um inteiro, mas sim um vetor do tipo inteiro
+p = ++mat; -> Não faz sentido pois mat não é um inteiro, mas sim um vetor do tipo inteiro
