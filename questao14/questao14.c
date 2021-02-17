@@ -2,27 +2,17 @@
 #include <stdlib.h>
 #include <conio.h>
 
-void alimenta(float *vetor, int n){
+void alimenta(float *vetor, int n){ // Escolhe numeros aleatorios para o vetor
     for(int i = 0; i < n; i++){
         vetor[i] = rand()%100;
     }
 }
 
-void ordena(float *vetor, int n) {
-    float aux;
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n - 1; j++){
-            if(vetor[j] > vetor[j+1]){
-                aux = vetor[j];
-                vetor[j] = vetor[j+1];
-                vetor[j+1] = aux;
-            }
-        }
-    }
-
+int ordena(const void *a, const void *b) { // Declaração da função tendo como entrada A e B destituidos de seus tipos
+    return ( *(float*)a - *(float*) b); // Retorna a subtração de A e B convertidos para float
 }
 
-void mostrar(float *vetor, int n){
+void mostrar(float *vetor, int n){ // Printa os valores do vetor
     for(int i = 0; i < n; i++){
         printf(" %.2f ", vetor[i]);
     }
@@ -30,17 +20,17 @@ void mostrar(float *vetor, int n){
 }
 
 int main(){
-    int n = 10;
-    float *v;
+    int n = 10; // Declaracao de n
+    float *v; // Declaracao de ponteiro
 
-    v = malloc(n * sizeof(float));
+    v = malloc(n * sizeof(float)); // Aloca o vetor na memoria
 
-    alimenta(v, n);
-    mostrar(v, n);
-    ordena(v, n);
-    mostrar(v, n);
+    alimenta(v, n); // Escolhe numeros aleatorios para o vetor
+    mostrar(v, n); // Mostra na tela o vetor
+    qsort(v, n, sizeof (float), ordena); // Implementacao do qsort
+    mostrar(v, n); // Mostra na tela o vetor
 
 
-    free(v);
+    free(v); // Libera a memoria alocada para o vetor
     return 0;
 }
